@@ -1,0 +1,47 @@
+{
+  "name": "@runtimed/extensions",
+  "version": "0.1.0",
+  "description": "Interfaces and shared code for building extensions to the runt ecosystem",
+  "keywords": [
+    "runtimed",
+    "runt"
+  ],
+  "homepage": "https://github.com/runtimed/extensions#readme",
+  "bugs": {
+    "url": "https://github.com/runtimed/extensions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runtimed/extensions.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Anil Kulkarni",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+    "jose": "^6.0.12",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "@cloudflare/workers-types": "^4.20250810.0"
+  }
+}
