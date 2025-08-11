@@ -46,3 +46,5 @@ export type ProviderContext = {
   bearerToken: string | null;
   passport: Passport | null;
 };
+
+export type AuthenticatedProviderContext = NonNullable<ProviderContext>;
