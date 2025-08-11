@@ -35,7 +35,7 @@ export type ErrorPayload = {
 export class RuntError extends Error {
   constructor(
     public type: ErrorType,
-    private options: ExtensionErrorOptions
+    private options: ExtensionErrorOptions = {}
   ) {
     super(options.message ?? `RuntError: ${type}`, { cause: options.cause });
   }
