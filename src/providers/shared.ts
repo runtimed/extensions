@@ -47,4 +47,8 @@ export type ProviderContext = {
   passport: Passport | null;
 };
 
-export type AuthenticatedProviderContext = NonNullable<ProviderContext>;
+// https://github.com/microsoft/TypeScript/issues/28374
+type NonNullableValues<T> = {
+  [P in keyof T]-?: NonNullable<T[P]>;
+};
+export type AuthenticatedProviderContext = NonNullableValues<ProviderContext>;
