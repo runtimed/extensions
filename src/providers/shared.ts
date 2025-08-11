@@ -23,7 +23,7 @@ export type User = {
   email: string;
   name?: string;
   givenName?: string;
-  familyName: string;
+  familyName?: string;
 };
 
 export type Resource = {
