@@ -23,7 +23,7 @@ export type User = {
   email: string;
   name?: string;
   givenName?: string;
-  familyName: string;
+  familyName?: string;
 };
 
 export type Resource = {
@@ -46,3 +46,9 @@ export type ProviderContext = {
   bearerToken: string | null;
   passport: Passport | null;
 };
+
+// https://github.com/microsoft/TypeScript/issues/28374
+type NonNullableValues<T> = {
+  [P in keyof T]-?: NonNullable<T[P]>;
+};
+export type AuthenticatedProviderContext = NonNullableValues<ProviderContext>;

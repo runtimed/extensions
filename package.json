@@ -23,6 +23,10 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./providers/api_key": {
+      "import": "./dist/providers/api_key.js",
+      "types": "./dist/providers/api_key.d.ts"
     }
   },
   "files": [
