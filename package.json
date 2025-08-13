@@ -1,6 +1,6 @@
 {
   "name": "@runtimed/extensions",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Interfaces and shared code for building extensions to the runt ecosystem",
   "keywords": [
     "runtimed",
