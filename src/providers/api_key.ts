@@ -5,6 +5,7 @@ export enum ApiKeyCapabilities {
   Revoke = 'revoke',
   Delete = 'delete',
   CreateWithResources = 'create_with_resources',
+  ListKeysPaginated = 'list_keys_paginated',
 }
 
 export type CreateApiKeyRequest = {

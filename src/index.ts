@@ -3,5 +3,5 @@ export * from './providers/shared';
 export * from './errors';
 
 export type BackendExtension = {
-  apiKey?: ApiKeyProvider;
+  apiKey: ApiKeyProvider;
 };

@@ -9,6 +9,7 @@ import type {
 export type ProviderEnv = {
   DB: D1Database;
   AUTH_ISSUER: string;
+  EXTENSION_CONFIG?: string; // JSON string containing arbitrary data the extension needs
 };
 
 export enum AuthType {
@@ -16,7 +17,10 @@ export enum AuthType {
   ApiKey = 'api_key',
 }
 
-export type Scope = 'runt:read' | 'runt:execute';
+export enum Scope {
+  RuntRead = 'runt:read',
+  RuntExecute = 'runt:execute',
+}
 
 export type User = {
   id: string;
