@@ -16,7 +16,7 @@ type ExtensionErrorOptions = {
   message?: string; // User-friendly message describing what happened
   responsePayload?: Record<string, unknown>; // Extra JSON data to be returned to the client
   debugPayload?: Record<string, unknown>; // Extra JSON data for debugging. Not returned to the client in production
-  cause?: Error; // The underlying error, if any
+  cause?: unknown; // The underlying error, if any
 };
 
 export type ErrorPayload = {
